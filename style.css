@@ -1,65 +1,72 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
   margin: 0;
   padding: 20px;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #800000;
+  margin-bottom: 5px;
+}
+
+p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
 }
 
 .container {
-  max-width: 400px;
+  max-width: 900px;
   margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2, h3 {
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.card .amount {
+  font-size: 28px;
+  font-weight: bold;
+  color: green;
+}
+
+.card.expenses .amount {
+  color: red;
 }
 
 form {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   gap: 10px;
+  margin-top: 30px;
 }
 
-input {
+input, select, button {
   padding: 10px;
-  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 button {
-  padding: 10px;
-  font-size: 16px;
-  background-color: #4CAF50;
-  color: white;
+  background: #800000;
+  color: #fff;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #45a049;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  position: relative;
-}
-
-li button {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  background-color: red;
-  color: white;
-  border: none;
-  padding: 5px;
-  cursor: pointer;
+  background: #a00000;
 }

@@ -2,26 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Budget Tracker</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <h1>Budget Tracker</h1>
-    
-    <form id="transaction-form">
+    <p>Track your income and expenses easily</p>
+
+    <div class="card">
+      <h2>Total Balance</h2>
+      <div class="amount" id="balance">₦0.1234</div>
+    </div>
+
+    <div class="card">
+      <h2>Total Income</h2>
+      <div class="amount" id="total-income">₦0.1999</div>
+    </div>
+
+    <div class="card expenses">
+      <h2>Total Expenses</h2>
+      <div class="amount" id="total-expenses">₦0.2345</div>
+    </div>
+
+    <form id="budget-form">
       <input type="text" id="description" placeholder="Description" required />
-      <input type="number" id="amount" placeholder="Amount (₦)" required />
-      <button type="submit">Add Transaction</button>
+      <input type="number" id="amount" placeholder="Amount" required />
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <button type="submit">Add</button>
     </form>
 
-    <h2>Transactions</h2>
     <ul id="transaction-list"></ul>
-
-    <h3>Total: ₦<span id="total">0.00</span></h3>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
